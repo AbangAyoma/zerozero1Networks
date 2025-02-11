@@ -39,18 +39,19 @@ src/
 ## Installation
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
-   cd <project-folder>
+   git clone https://github.com/AbangAyoma/zerozero1Networks.git
+   cd zerozero1Networks
    ```
 
 2. **Install dependencies:**
    ```bash
-   npm install
+   cd server && npm install
+   cd client && npm install
    ```
 
 3. **Run the development server:**
    ```bash
-   npm start
+   npm run dev
    ```
 
 ## Available Pages
