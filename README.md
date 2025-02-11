@@ -1,50 +1,80 @@
-# React + TypeScript + Vite
+# Zero Zero Network (Web Development & Cybersecurity)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is an online training platform designed to offer courses in **Web Development** and **Cybersecurity**. The platform allows students to track their learning progress, submit assignments, and manage payments with a two-installment payment plan.
 
-Currently, two official plugins are available:
+## Features
+- **User Dashboard:** Displays user information, progress bar, and time remaining in weeks and days.
+- **Payment System:** Supports a two-installment plan.
+- **Course Categories:** Web Development (Frontend & Backend) and Cybersecurity.
+- **Assignments:** Students can submit assignments and view grades.
+- **Progress Tracking:** Visual progress bars to track completion.
+- **Comments Section:** Students can engage in discussions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+### Frontend
+- **React** with TypeScript
+- **React Router** for routing
+- **TailwindCSS** for styling
+- **shadcn/ui** for reusable UI components
 
-## Expanding the ESLint configuration
+### Backend
+- **Node.js**
+- **Express.js**
+- **MongoDB** (or any preferred database)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Project Structure
+```
+src/
+├── components/
+│   └── ui/            # Reusable UI components (Card, Buttons, etc.)
+├── pages/
+│   ├── HomePage.tsx
+│   ├── Dashboard.tsx
+│   ├── Login.tsx
+│   ├── Register.tsx
+│   └── PaymentPage.tsx
+└── App.tsx            # Main app component
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Installation
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   cd <project-folder>
+   ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+3. **Run the development server:**
+   ```bash
+   npm start
+   ```
+
+## Available Pages
+- `/`: Home page
+- `/dashboard`: User dashboard
+- `/login`: User login page
+- `/register`: User registration page
+- `/payment`: Payment page
+
+## Suggested Next Steps
+- **Authentication:** Implement secure user login and registration.
+- **Backend Integration:** Connect the frontend to backend APIs.
+- **Payment System:** Develop logic for handling installment payments.
+- **Assignment Module:** Create assignment submission and grading system.
+
+## Contribution Guidelines
+1. Fork the repository.
+2. Create a new feature branch (`git checkout -b your-feature-name`).
+3. Commit your changes with descriptive messages (`git commit -m "Implemented [feature name or task]"`).
+4. Push your changes (`git push origin your-feature-name`).
+5. Open a pull request for review.
+
+## License
+This project is licensed under the [MIT License](LICENSE).
+
+---
+Let's build something impactful and user-friendly for online learning! 🚀
