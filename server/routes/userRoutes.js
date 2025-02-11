@@ -1,8 +1,8 @@
 import express from "express";
+import { getUserProfile } from "../controllers/userController.js";
+
 const router = express.Router();
 
-router.get("/profile", (req, res) => {
-  res.json({ message: "User profile endpoint works!" });
-});
+router.get("/profile", getUserProfile);
 
 export default router;
